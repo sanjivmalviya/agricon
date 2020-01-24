@@ -1,0 +1,6 @@
+[03-Aug-2019 12:31:41 Asia/Kolkata] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/agriconf/public_html/erp/functions.php on line 24
+[03-Aug-2019 12:31:41 Asia/Kolkata] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/agriconf/public_html/erp/functions.php on line 358
+[03-Aug-2019 12:31:41 Asia/Kolkata] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/agriconf/public_html/erp/functions.php on line 359
+[03-Aug-2019 12:31:43 Asia/Kolkata] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/agriconf/public_html/erp/functions.php on line 24
+[03-Aug-2019 12:31:43 Asia/Kolkata] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/agriconf/public_html/erp/functions.php on line 358
+[03-Aug-2019 12:31:43 Asia/Kolkata] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/agriconf/public_html/erp/functions.php on line 359

@@ -1,0 +1,2 @@
+[24-Jan-2020 06:46:13 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home1/agriconfertilize/erp.agriconfertilizers.com/functions.php on line 4
+[24-Jan-2020 06:46:40 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home1/agriconfertilize/erp.agriconfertilizers.com/functions.php on line 4

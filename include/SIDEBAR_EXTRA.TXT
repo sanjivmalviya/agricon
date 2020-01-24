@@ -1,0 +1,35 @@
+ <li class="has_sub">
+                                <a href="javascript:void(0);" class="waves-effect"><i class="ti-layout-grid2"></i><span> Masters </span> <span class="menu-arrow"></span></a>
+                                <ul class="list-unstyled">
+                                    <li><a href="category.php"> Category</a></li>
+                                    <li><a href="sub_category.php">Sub-Category</a></li>
+                                    <li><a href="sub_sub_category.php">Sub-sub Category</a></li>
+                                    <li><a href="sub_sub_sub_category.php">Sub-sub-sub Category</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="has_sub">
+                                <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-first-order"></i><span> Product </span> <span class="menu-arrow"></span></a>
+                                <ul class="list-unstyled">
+                                   <li><a href="add_product.php"> Add Product</a></li>
+                                    <li><a href="view_product.php">View Product</a></li>
+                                </ul>
+                            </li>
+
+
+                            <li class="has_sub">
+                                <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-universal-access"></i><span> Employee </span> <span class="menu-arrow"></span></a>
+                                <ul class="list-unstyled">
+                                   <li><a href="add_employee.php">Add Employee</a></li>
+                                    <li><a href="view_employee.php">View Employee</a></li>
+                                </ul>
+                            </li>
+
+                           
+                            <li class="has_sub">
+                                <a href="javascript:void(0);" class="waves-effect"><i class="fa fa-users"></i><span> Customer Master </span> <span class="menu-arrow"></span></a>
+                                <ul class="list-unstyled">
+                                   <li><a href="add_customer.php">Add Customer Master</a></li>
+                                    <li><a href="view_customer.php">View Customer Master</a></li>
+                                </ul>
+                            </li>

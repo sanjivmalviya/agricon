@@ -1,0 +1,12 @@
+[03-Aug-2019 07:13:24 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/agriconf/public_html/erp/modules/sales/add.php:2) in /home/agriconf/public_html/erp/functions.php on line 5
+[03-Aug-2019 07:13:58 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/agriconf/public_html/erp/modules/sales/add.php:2) in /home/agriconf/public_html/erp/functions.php on line 2
+[03-Aug-2019 07:34:33 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/agriconf/public_html/erp/modules/sales/add.php:2) in /home/agriconf/public_html/erp/functions.php on line 2
+[23-Jan-2020 23:54:40 Asia/Kolkata] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home1/agriconfertilize/erp.agriconfertilizers.com/functions.php on line 658
+[23-Jan-2020 23:54:40 Asia/Kolkata] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home1/agriconfertilize/erp.agriconfertilizers.com/functions.php on line 658
+[23-Jan-2020 23:55:05 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home1/agriconfertilize/erp.agriconfertilizers.com/functions.php on line 594
+[23-Jan-2020 23:55:05 Asia/Kolkata] PHP Warning:  Invalid argument supplied for foreach() in /home1/agriconfertilize/erp.agriconfertilizers.com/modules/employee/marketing_employee_meetings.php on line 21
+[23-Jan-2020 23:55:13 Asia/Kolkata] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home1/agriconfertilize/erp.agriconfertilizers.com/functions.php on line 658
+[23-Jan-2020 23:55:13 Asia/Kolkata] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home1/agriconfertilize/erp.agriconfertilizers.com/functions.php on line 658
+[23-Jan-2020 23:59:12 Asia/Kolkata] PHP Warning:  Invalid argument supplied for foreach() in /home1/agriconfertilize/erp.agriconfertilizers.com/modules/employee/marketing_employee_meetings.php on line 21
+[24-Jan-2020 11:05:51 Asia/Kolkata] PHP Warning:  Invalid argument supplied for foreach() in /home1/agriconfertilize/erp.agriconfertilizers.com/modules/employee/marketing_employee_meetings.php on line 21
+[24-Jan-2020 11:38:07 Asia/Kolkata] PHP Warning:  Invalid argument supplied for foreach() in /home1/agriconfertilize/erp.agriconfertilizers.com/modules/employee/marketing_employee_meetings.php on line 21

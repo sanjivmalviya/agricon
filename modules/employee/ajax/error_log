@@ -1,0 +1,4 @@
+[24-Jan-2020 11:51:04 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home1/agriconfertilize/erp.agriconfertilizers.com/functions.php on line 594
+[24-Jan-2020 11:51:04 Asia/Kolkata] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home1/agriconfertilize/erp.agriconfertilizers.com/functions.php on line 622
+[24-Jan-2020 11:51:04 Asia/Kolkata] PHP Warning:  Invalid argument supplied for foreach() in /home1/agriconfertilize/erp.agriconfertilizers.com/modules/employee/ajax/get_map_cordinates.php on line 11
+[24-Jan-2020 11:52:29 Asia/Kolkata] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home1/agriconfertilize/erp.agriconfertilizers.com/functions.php on line 594
