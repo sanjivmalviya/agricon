@@ -173,7 +173,7 @@
 
                                                 $total_miles = 0;
                                                 $total_km = 0;
-                                                $$total_location_count = 0;
+                                                $total_location_count = 0;
                                                 if(isset($api_response)){
                                                 
                                                    $api_response =json_decode($api_response[0]['api_response'],true);

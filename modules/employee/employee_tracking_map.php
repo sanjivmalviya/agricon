@@ -22,7 +22,7 @@
 
     <div id="map"></div>
 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0siDlz7oiay5U2iLfyPRC7lavRnpcB9c&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGSG21Xmgqp4De36T2Xh2ftB5tbDQku3A&callback=initMap"></script>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
