@@ -1,11 +1,11 @@
 <?php
 
-// error_reporting(1);
+error_reporting(0);
 session_start();
 date_default_timezone_set('Asia/Kolkata');
 $timestamp = date('Y-m-d h:i:s');
-$baseurl = $_SERVER['SERVER_NAME'];
-// $baseurl = $_SERVER['SERVER_NAME']."/project/agricon";
+// $baseurl = $_SERVER['SERVER_NAME'];
+$baseurl = $_SERVER['SERVER_NAME']."/softworld_projects/agricon";
 
 define('ROOT',$baseurl);
 
@@ -14,21 +14,21 @@ define('ROOT',$baseurl);
 function connect(){
 
 
-    $host = 'localhost';
-
-     $user = 'agriconf_erp';
-
-     $password = '#T2l#ZD[(m?m';
-
-     $db = 'agriconf_erp';
-
     // $host = 'localhost';
 
-    // $user = 'root';
+    //  $user = 'agriconf_erp';
 
-    // $password = '';
+    //  $password = '#T2l#ZD[(m?m';
 
-    // $db = 'agricon';
+    //  $db = 'agriconf_erp';
+
+    $host = 'localhost';
+
+    $user = 'root';
+
+    $password = '';
+
+    $db = 'softworld_agricon';
 
     $connect = mysqli_connect($host,$user,$password,$db);
 

@@ -7,12 +7,9 @@
    $table_name = 'tbl_employee';
 
    $field_name = 'employee_id';
-
-    
+   
 
    if(isset($_POST['submit'])){
-
-
 
     // POST DATA
 
@@ -42,6 +39,16 @@
 
     $employee_type = $_POST['employee_type'];
 
+    // $employee_annual_ctc = $_POST['employee_annual_ctc'];
+    
+    $employee_monthly_hra = $_POST['employee_monthly_hra'];
+    
+    $employee_monthly_da = $_POST['employee_monthly_da'];
+
+    $employee_monthly_extra_allowances = $_POST['employee_monthly_extra_allowances'];
+    
+    $employee_monthly_basic_salary = $_POST['employee_monthly_basic_salary'];
+   
 
     // FILE DATA 
 
@@ -108,15 +115,29 @@
                'employee_spouse_mobile' => $employee_spouse_mobile,
                
                'employee_type' => $employee_type,
+               
+               // 'employee_annual_ctc' => $employee_annual_ctc,
+               'employee_monthly_hra' => $employee_monthly_hra,
+               'employee_monthly_da' => $employee_monthly_da,
+               'employee_monthly_extra_allowances' => $employee_monthly_extra_allowances,
+               'employee_monthly_basic_salary' => $employee_monthly_basic_salary
 
              );
 
 
-
-             
-
              if(insert('tbl_employee',$form_data)){
 
+                 $last_id = last_id('tbl_employee','employee_id');
+
+                 $form_data_salary_history = array(
+                  'employee_id' => $last_id,
+                  'employee_monthly_hra' => $employee_monthly_hra,
+                  'employee_monthly_da' => $employee_monthly_da,
+                  'employee_monthly_extra_allowances' => $employee_monthly_extra_allowances,
+                  'employee_monthly_basic_salary' => $employee_monthly_basic_salary
+                 );
+                 insert('employee_salary_history',$form_data_salary_history);
+                 
                  $success = "Employee Added Successfully";
 
              }else{
@@ -167,7 +188,13 @@
 
                'employee_spouse_mobile' => $employee_spouse_mobile,
 
-               'employee_type' => $employee_type
+               'employee_type' => $employee_type,
+               
+               // 'employee_annual_ctc' => $employee_annual_ctc,
+               'employee_monthly_hra' => $employee_monthly_hra,
+               'employee_monthly_da' => $employee_monthly_da,
+               'employee_monthly_extra_allowances' => $employee_monthly_extra_allowances,
+               'employee_monthly_basic_salary' => $employee_monthly_basic_salary
 
              );
 
@@ -235,7 +262,13 @@
 
            'employee_spouse_mobile' => $edit_data['employee_spouse_mobile'],
 
-           'employee_type' => $edit_data['employee_type']
+           'employee_type' => $edit_data['employee_type'],
+
+           // 'employee_annual_ctc' => $edit_data['employee_annual_ctc'],
+           'employee_monthly_hra' => $edit_data['employee_monthly_hra'],
+           'employee_monthly_da' => $edit_data['employee_monthly_da'],
+           'employee_monthly_extra_allowances' => $edit_data['employee_monthly_extra_allowances'],
+           'employee_monthly_basic_salary' => $edit_data['employee_monthly_basic_salary']
 
          );
 
@@ -276,6 +309,16 @@
     $employee_aadhaar_number = $_POST['employee_aadhaar_number'];
 
     $employee_type = $_POST['employee_type'];
+    
+    // $employee_annual_ctc = $_POST['employee_annual_ctc'];
+
+    $employee_monthly_hra = $_POST['employee_monthly_hra'];
+
+    $employee_monthly_da = $_POST['employee_monthly_da'];
+
+    $employee_monthly_extra_allowances = $_POST['employee_monthly_extra_allowances'];
+
+    $employee_monthly_basic_salary = $_POST['employee_monthly_basic_salary'];
 
 
 
@@ -342,7 +385,17 @@
 
                'employee_spouse_mobile' => $_POST['employee_spouse_mobile'],
 
-               'employee_type' => $_POST['employee_type']
+               'employee_type' => $_POST['employee_type'],
+              
+               // 'employee_annual_ctc' => $_POST['employee_annual_ctc'],
+               
+               'employee_monthly_hra' => $_POST['employee_monthly_hra'],
+               
+               'employee_monthly_da' => $_POST['employee_monthly_da'],
+
+               'employee_monthly_extra_allowances' => $_POST['employee_monthly_extra_allowances'],
+
+               'employee_monthly_basic_salary' => $_POST['employee_monthly_basic_salary']
 
              );
 
@@ -412,7 +465,13 @@
 
            'employee_spouse_mobile' => $_POST['employee_spouse_mobile'],
 
-           'employee_type' => $_POST['employee_type']
+           'employee_type' => $_POST['employee_type'],
+
+           // 'employee_annual_ctc' => $_POST['employee_annual_ctc'],
+           'employee_monthly_hra' => $_POST['employee_monthly_hra'],
+           'employee_monthly_da' => $_POST['employee_monthly_da'],
+           'employee_monthly_extra_allowances' => $_POST['employee_monthly_extra_allowances'],
+           'employee_monthly_basic_salary' => $_POST['employee_monthly_basic_salary']
 
          );
 
@@ -572,7 +631,7 @@
 
                                              <div class="input-group">
 
-                                                <input type="date" required="" class="form-control" placeholder="mm/dd/yyyy" id="employee_doj" value="<?php if(isset($edit_data['employee_doj'])){ echo date('Y-m-d',strtotime($edit_data['employee_doj'])); } ?>" name="employee_doj" >
+                                                <input type="date" required="" class="form-control" placeholder="mm/dd/yyyy" id="employee_doj" value="<?php if(isset($edit_data['employee_doj'])){ echo date('Y-m-d',strtotime($edit_data['employee_doj'])); }else{ echo date('Y-m-d');  } ?>" name="employee_doj" >
 
                                                 <span class="input-group-addon bg-custom b-0"><i class="mdi mdi-calendar text-white"></i></span>
 
@@ -707,9 +766,44 @@
 
                                           </div>
 
-                                       </div>
+                                       </div>                             
 
-                                     
+                                    </div>
+
+                                    <div class="row">
+
+                                      <div class="col-md-12"> 
+                                        <h4>Employee Salary</h4>
+                                      </div>
+
+                                      <div class="col-md-6 table-responsive">
+
+                                      <table class="table table-condensed table-bordered">
+                                        <tbody>
+                                          <!-- <tr>
+                                            <td width="50%">Annual CTC </td>
+                                            <td width="50%"><input type="number" parsley-trigger="change" placeholder="" class="form-control" name="employee_annual_ctc" id="employee_annual_ctc" value="<?php if(isset($edit_data['employee_annual_ctc'])){ echo $edit_data['employee_annual_ctc']; } ?>"></td>
+                                          </tr> -->
+                                          <tr>
+                                            <td>Monthly Basic Salary <span class="text-danger">*</span></td>
+                                            <td><input type="number" required="" parsley-trigger="change" placeholder="" class="form-control" name="employee_monthly_basic_salary" id="employee_monthly_basic_salary" value="<?php if(isset($edit_data['employee_monthly_basic_salary'])){ echo $edit_data['employee_monthly_basic_salary']; } ?>"></td>
+                                          </tr>
+                                          <tr>
+                                            <td>Monthly HRA</td>
+                                            <td><input type="number" parsley-trigger="change" placeholder="" class="form-control" name="employee_monthly_hra" id="employee_monthly_hra" value="<?php if(isset($edit_data['employee_monthly_hra'])){ echo $edit_data['employee_monthly_hra']; }else{ echo 0; } ?>"></td>
+                                          </tr>
+                                          <tr>
+                                            <td>Monthly DA</td>
+                                            <td><input type="number" parsley-trigger="change" placeholder="" class="form-control" name="employee_monthly_da" id="employee_monthly_da" value="<?php if(isset($edit_data['employee_monthly_da'])){ echo $edit_data['employee_monthly_da']; }else{ echo 0; } ?>"></td>
+                                          </tr>
+
+                                          <tr>
+                                            <td>Monthly Extra Allowances</td>
+                                            <td><input type="number" parsley-trigger="change" placeholder="" class="form-control" name="employee_monthly_extra_allowances" id="employee_monthly_extra_allowances" value="<?php if(isset($edit_data['employee_monthly_extra_allowances'])){ echo $edit_data['employee_monthly_extra_allowances']; }else{ echo 0; } ?>"></td>
+                                          </tr>
+                                          
+                                        </tbody>
+                                      </table>
 
                                     </div>
 

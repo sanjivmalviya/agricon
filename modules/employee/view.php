@@ -78,9 +78,10 @@
                                        <th>Name</th>
                                        <th>Designation</th>
                                        <th>HQ</th>           
+                                       <th>Salary</th>           
                                        <th>Type</th>           
                                        <th>View Detail</th>           
-                                       <th>Punch Detail</th>           
+                                       <!-- <th>Punch Detail</th>            -->
                            				<th class="text-right">Actions</th>
                            			</thead>
 
@@ -103,39 +104,11 @@
                                              <td><?php echo $rs['employee_name']; ?></td>
                                              <td><?php echo $rs['employee_designation']; ?></td>
                                              <td><?php echo $rs['employee_hq']; ?></td>
+                                             <td><?php echo $rs['employee_salary']; ?></td>
                                              <td><?php if($rs['employee_type'] == '1'){ echo "<span class='text-success'>Staff</span>"; }else{ echo "<span class='text-warning'>Marketing</span>"; } ?></td>
-                                             <td>
-                                             <?php 
-                                                $detail_html = "
-                                                <table class='table table-striped table-bordered table-condensed'>
-
-                                                <tr>  
-                                                   <td>Mobile Number</td>
-                                                   <td>Email</td>
-                                                   <td>Date of Joining</td>
-                                                   <td>Date of Birth</td>
-                                                   <td>PAN Number</td>
-                                                   <td>AADHAAR Number</td>
-                                                   <td>Spouse Name</td>
-                                                   <td>Spouse Contact</td>
-                                                </tr>
-                                                <tr>  
-                                                   <td>".$rs['employee_mobile']."</td>
-                                                   <td>".$rs['employee_email']."</td>
-                                                   <td>".$rs['employee_doj']."</td>
-                                                   <td>".$rs['employee_dob']."</td>
-                                                   <td>".$rs['employee_pan']."</td>
-                                                   <td>".$rs['employee_aadhaar_number']."</td>
-                                                   <td>".$rs['employee_spouse_name']."</td>
-                                                   <td>".$rs['employee_mobile']."</td>
-                                                </tr>                                                
-                                                </table>";
-                                             ?>
-                                             <a class='danger' data-placement='top' 
-                                             data-content="<?php echo $detail_html; ?>" 
-                                             title="About Employee" href='#'>Detail</a>
+                                             <td><a href="detail.php?id=<?php echo $rs['employee_id']; ?>" class="">Detail</a>
                                              </td>
-                                             <td width="7%"><a href="punch_detail.php?id=<?php echo $rs['employee_id']; ?>">View</a></td>
+                                           <!--   <td width="7%"><a href="punch_detail.php?id=<?php echo $rs['employee_id']; ?>">View</a></td> -->
                                              <td>
                                                 <a href="add.php?edit_id=<?php echo $rs['employee_id']; ?>"><i class="fa fa-pencil"></i></a>
                                                 <a href="view.php?delete_id=<?php echo $rs['employee_id']; ?>" onclick=" return confirm('Are you sure ?'); "><i class="fa fa-trash"></i></a>
