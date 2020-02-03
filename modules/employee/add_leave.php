@@ -10,10 +10,8 @@
    $getLeaves = "SELECT *,(SELECT employee_name FROM tbl_employee WHERE employee_id = lv.employee_id) as employee_name FROM employee_annual_leaves lv ORDER BY year,id DESC";
    $getLeaves = getRaw($getLeaves);
 
-
    $employees = getAll('tbl_employee');
    
-
    if(isset($_POST['submit'])){
 
     $employee_id = $_POST['employee_id'];
