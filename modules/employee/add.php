@@ -38,6 +38,8 @@
     $employee_aadhaar_number = $_POST['employee_aadhaar_number'];
 
     $employee_type = $_POST['employee_type'];
+    
+    $employee_order_access = $_POST['employee_order_access'];
 
     // $employee_annual_ctc = $_POST['employee_annual_ctc'];
     
@@ -116,6 +118,8 @@
                
                'employee_type' => $employee_type,
                
+               'employee_order_access' => $employee_order_access,
+               
                // 'employee_annual_ctc' => $employee_annual_ctc,
                'employee_monthly_hra' => $employee_monthly_hra,
                'employee_monthly_da' => $employee_monthly_da,
@@ -189,6 +193,7 @@
                'employee_spouse_mobile' => $employee_spouse_mobile,
 
                'employee_type' => $employee_type,
+               'employee_order_access' => $employee_order_access,
                
                // 'employee_annual_ctc' => $employee_annual_ctc,
                'employee_monthly_hra' => $employee_monthly_hra,
@@ -263,6 +268,7 @@
            'employee_spouse_mobile' => $edit_data['employee_spouse_mobile'],
 
            'employee_type' => $edit_data['employee_type'],
+           'employee_order_access' => $edit_data['employee_order_access'],
 
            // 'employee_annual_ctc' => $edit_data['employee_annual_ctc'],
            'employee_monthly_hra' => $edit_data['employee_monthly_hra'],
@@ -309,6 +315,7 @@
     $employee_aadhaar_number = $_POST['employee_aadhaar_number'];
 
     $employee_type = $_POST['employee_type'];
+    $employee_order_access = $_POST['employee_order_access'];
     
     // $employee_annual_ctc = $_POST['employee_annual_ctc'];
 
@@ -386,6 +393,7 @@
                'employee_spouse_mobile' => $_POST['employee_spouse_mobile'],
 
                'employee_type' => $_POST['employee_type'],
+               'employee_order_access' => $_POST['employee_order_access'],
               
                // 'employee_annual_ctc' => $_POST['employee_annual_ctc'],
                
@@ -466,6 +474,7 @@
            'employee_spouse_mobile' => $_POST['employee_spouse_mobile'],
 
            'employee_type' => $_POST['employee_type'],
+           'employee_order_access' => $_POST['employee_order_access'],
 
            // 'employee_annual_ctc' => $_POST['employee_annual_ctc'],
            'employee_monthly_hra' => $_POST['employee_monthly_hra'],
@@ -762,6 +771,23 @@
 
                                              <label for="employee_type_2">
                                              <input type="radio" name="employee_type" id="employee_type_2" value="2"> Marketing Employee</label> 
+
+
+                                          </div>
+
+                                       </div>  
+
+                                       <div class="col-md-4">
+
+                                          <div class="form-group">
+
+                                             <label for="employee_order_access">Order Access</label> 
+                                             <br>
+                                             <label for="employee_order_access_0">
+                                             <input type="radio" name="employee_order_access" id="employee_order_access_0" value="0" checked=""> No</label> 
+
+                                             <label for="employee_order_access_1">
+                                             <input type="radio" name="employee_order_access" id="employee_order_access_1" value="1"> Yes</label> 
 
 
                                           </div>
