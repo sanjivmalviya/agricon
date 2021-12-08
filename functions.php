@@ -14,14 +14,6 @@ define('ROOT',$baseurl);
 function connect(){
 
 
-    // $host = 'localhost';
-
-    //  $user = 'agriconf_erp';
-
-    //  $password = '#T2l#ZD[(m?m';
-
-    //  $db = 'agriconf_erp';
-
     $host = 'localhost';
 
     $user = 'root';
